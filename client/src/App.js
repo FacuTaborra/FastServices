@@ -15,6 +15,8 @@ import './App.css';
 
 function App() {
 
+
+
   return (
     <div className="App">
       <Header/>
@@ -34,10 +36,14 @@ function App() {
           <Route path='/client/home/finished'  element={ <Solicitudes estado = "terminado"/>}>
 
           
-          </Route>
+         
+
+
           {/*<Route path='/evaluations'  element={ <Evaluaciones/>} />*/}
+        
+        </Route>
           <Route path='*'  element={ <Error/>} />
-        </Routes>
+       </Routes>
       </div>
       <Footer/>
     </div>
