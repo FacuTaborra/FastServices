@@ -22,7 +22,7 @@ const DatosPersonales = () => {
 
 
   const auth = useAuth();
-  const user = auth.getUser();
+  const user = JSON.parse(localStorage.getItem('user'));
 
 
   useEffect(() => {

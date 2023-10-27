@@ -145,6 +145,41 @@ const solicitudController = {
             res.status(500).json(jsonResponse(500, { message: 'Error en el servidor al cancelar solicitud' }));
           }
           
+    }, 
+
+    getPrueba: async function (req, res){
+        try{
+            console.log("prueba");
+            const id = req.params.id; 
+            const response = await db.Solicitud.findAll({
+                where: {
+                    estado: "activa",
+                },
+                include: [{
+                    association: 'profesion_solicitud',
+                }]
+              }).then( (solicitudesResponse) => {
+                console.log(solicitudesResponse);
+                
+                res.status(200).json(jsonResponse(200, {
+                    message: "Solicitudes encontradas",
+                    //images: images,
+                    solicitudes: solicitudesResponse
+                }))
+            })
+            .catch((error) => {
+            // Maneja cualquier error
+                res.status(500).json(jsonResponse(500, {
+                    message: "Error al buscar las solicitudes",
+                    solicitudes: [],
+                }));
+                
+            });
+        }catch(error){
+            console.error('Error al obtener solicitudes', error);
+            res.status(500).json({ message: 'Error en el servidor' });
+        }
+
     }
 };
 

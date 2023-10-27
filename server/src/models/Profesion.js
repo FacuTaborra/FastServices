@@ -19,13 +19,12 @@ module.exports = (sequelize, DataTypes) => {
       // Relación hasMany con la tabla PrestadorProfesiones
       Profesion.hasMany(models.PrestadorProfesiones, {
         foreignKey: 'idProfesion',
-        as: 'prestadorProfesiones', 
+        as: 'prestador_profesiones',
       });
   
-      // Relación hasMany con la tabla SolicitudProfesiones
-      Profesion.belongsTo(models.Solicitud, {
+      Profesion.hasMany(models.Solicitud, {
+        as: 'solicitudes_profesion',
         foreignKey: 'idProfesion',
-        as: 'solicitud_profesiones',  
       });
     };
   

@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const PrestadorProfesiones = sequelize.define('PrestadorProfesiones', {
-      idprestador: {
+      idPrestador: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -26,12 +26,8 @@ module.exports = (sequelize, DataTypes) => {
   
       // relación con la tabla Profesion
       PrestadorProfesiones.belongsTo(models.Profesion, {
-        foreignKey: {
-          name: 'idProfesion',
-          allowNull: false,
-        },
-        targetKey: 'idProfesion',
-        as: 'profesion',  
+        foreignKey: 'idProfesion',
+        as: 'profesion',
       });
     };
   

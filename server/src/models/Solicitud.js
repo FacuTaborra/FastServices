@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: 'idSolicitud', // Clave foránea en FotoSolicitud
     });
     Solicitud.belongsTo(models.Profesion, {
-      as: 'profesiones',
+      as: 'profesion_solicitud',
       foreignKey: 'idProfesion', // Clave foránea en Solicitud
     });
   };
