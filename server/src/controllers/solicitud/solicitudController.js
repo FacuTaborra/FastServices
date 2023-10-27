@@ -155,9 +155,7 @@ const solicitudController = {
                 where: {
                     estado: "activa",
                 },
-                include: [{
-                    association: 'profesion_solicitud',
-                }]
+                
               }).then( (solicitudesResponse) => {
                 console.log(solicitudesResponse);
                 
