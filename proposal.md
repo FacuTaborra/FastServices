@@ -40,7 +40,7 @@ Regularidad:
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Cliente<br>2. CRUD Servicio requerido<br>3. CRUD Localidad<br>4. CRUD Materiales<br>5. CRUD Reseña<br>6. CRUD Presupuesto<br>7. CRUD Prestador|
+|CRUD |1. CRUD Cliente<br>2. CRUD Servicio requerido<br>3. CRUD Localidad<br>4. CRUD Reseña<br>6. CRUD Presupuesto<br>7. CRUD Prestador|
 |CUU/Epic|1. Hacer pedido de servicio por el cliente <br>2. Realizar presupuesto (prestador) para el cliente <br>3. Confirmación del presupuesto eligiendo fecha y hora y cobrando el monto requerido|
 
 
