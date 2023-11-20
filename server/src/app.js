@@ -29,6 +29,10 @@ app.listen(app.get("port"), () => {
 });
 
 //rutas
+app.get("/", (req, res) => {
+    res.send("Bienvenido a la API de FastService");
+});
+
 app.use("/api/usuario", usuariosRoutes);
 app.use('/api/solicitud', solicitudRoutes);
 app.use('/api/direccion', direccionesRoutes);
